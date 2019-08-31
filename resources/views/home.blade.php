@@ -190,7 +190,6 @@
 
 
 
-
     <script src="{{asset('js/jquery-ui-1.12.1.custom/external/jquery/jquery.js')}}"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{asset('js/jquery-ui-1.12.1.custom/jquery-ui.js')}}"></script>
@@ -262,5 +261,12 @@
         })
 
     </script>
+
+    @if($errors->has('name') || $errors->has('type') || $errors->has('status'))
+        <h1>error</h1>
+        <script>
+            $('#exampleModal').modal('show');
+        </script>
+    @endif
     </body>
 </html>

@@ -36,7 +36,7 @@ class HomeController extends Controller
             return back();
         }catch (Error $e){
             Flash::error($this->failedMessage->todoCreateFiled);
-            return back()->withInput();
+            return redirect('home')->withInput();
         }
 
     }
